@@ -9,17 +9,15 @@
 		</record>
 		<record id="registry_02" model="motorcycle.registry">
 			<field name="registry_number">Reg 002</field>
-                        <field name="vin">1249832rsad34</field>
-                        <field name="first_name">Billy</field>
-                        <field name="last_name">Bob</field>
-                     
+			<field name="vin">1249832rsad34</field>
+			<field name="first_name">Billy</field>
+			<field name="last_name">Bob</field>  
 		</record>
 		<record id="registry_03" model="motorcycle.registry">
-                        <field name="registry_number">Reg 003</field>
-                   	<field name="vin">59838498</field>
-                      	<field name="first_name">Joe</field>
-                       	<field name="last_name">Doe</field>
-                </record>
-
+			<field name="registry_number">Reg 003</field>
+			<field name="vin">59838498</field>
+			<field name="first_name">Joe</field>
+			<field name="last_name">Doe</field>
+        </record>
 	</data>
 </odoo>

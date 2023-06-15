@@ -13,7 +13,7 @@
 	'depends': ['base'],
         'data': [
             'security/motorcycle_groups.xml',
-            'security/ir.model.access.csv','security/motorcycle_security.xml'
+            'security/ir.model.access.csv','security/motorcycle_security.xml','views/motorcycle_menuitems.xml'
 		],
 	'demo': [
 		'demo/motorcycle_demo.xml'
