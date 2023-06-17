@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <form string="Registry Form">
                 <sheet>
-                    <h1><field name="first_name"/></h1>
+                    <h1><field name="registry_number"/></h1>
                     <group> 
                         <separator string="Motorcycle Image"/>
                         <field name="picture" string="Image"/>
@@ -39,7 +39,7 @@
 
 
     <record id="registry_view_list" model="ir.ui.view">
-        <field name="name">registry.view.form</field>
+        <field name="name">registry.view.list</field>
         <field name="model">motorcycle.registry</field>
         <field name="arch" type="xml">
             <tree string="Registry List">
@@ -49,6 +49,19 @@
                 <field name="first_name"/>
                 <field name="last_name"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="registry_view_search" model="ir.ui.view">
+        <field name="name">registry.view.search</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="arch" type="xml">
+            <search string="Registry Search">
+                <field name="registry_number"/>
+                <field name="vin"/>
+                <field name="last_name"/>
+                <field name="license_plate"/>
+            </search>
         </field>
     </record>
 </odoo>

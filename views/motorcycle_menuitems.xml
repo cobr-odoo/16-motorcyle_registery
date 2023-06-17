@@ -12,7 +12,7 @@
         </field>
     </record>
 
-    <menuitem name="Motorcycle REG"
+    <menuitem name="Motorcycle registry"
                 id="menu_motorcyle"
                 sequence="1"
                 web_icon="motorcycle,static/description/icon.png">

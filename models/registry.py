@@ -13,6 +13,3 @@ class Registry(models.Model):
 	license_plate = fields.Char()
 	certificate_title = fields.Binary()
 	register_date = fields.Date()
-	
-	
-
