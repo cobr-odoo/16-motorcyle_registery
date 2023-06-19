@@ -18,7 +18,6 @@
                             <field name="vin"/>
                             <field name="license_plate"/>
                             <field name="current_mileage"/>
-                            <field name="license_plate"/>
                         </group>
                         <group>
                             <separator string="Owner Information"/>
