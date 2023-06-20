@@ -22,6 +22,15 @@ class Registry(models.Model):
 	certificate_title = fields.Binary(string='Certificate of Title')
 	register_date = fields.Date(string='Registration Date')
 
+	owner_id = fields.Many2one(comodel_name='res.partner', ondelete='restrict')
+	owner_phone = fields.Char(related='owner_id.phone')
+	owner_email = fields.Char(related='owner_id.email')
+
+	make = fields.Char(compute='_compute_from_vin')
+	model = fields.Char(compute='_compute_from_vin')
+	year = fields.Char(compute='_compute_from_vin')
+
+
 	@api.model_create_multi
 	def create(self, vals_list):
 		for vals in vals_list:
@@ -43,3 +52,10 @@ class Registry(models.Model):
 		for registry in self:
 			if not (re.match(pattern, registry.vin)):
 				raise ValidationError("Invalid License Plate")
+			
+	@api.depends('vin')
+	def _compute_from_vin(self):
+		for record in self:
+			record.make = record.vin[:2]
+			record.model = record.vin[2:4]
+			record.year = record.vin[4:6]
