@@ -3,19 +3,19 @@
 	<data noupdate="1">
 		<record id="registry_01" model="motorcycle.registry">
 			<field name="registry_number">Reg 001</field>
-			<field name="vin">574943y5hfh94</field>
+			<field name="vin">KAUK21XL847321</field>
 			<field name="first_name">John</field>
 			<field name="last_name">Smith</field>
 		</record>
 		<record id="registry_02" model="motorcycle.registry">
 			<field name="registry_number">Reg 002</field>
-			<field name="vin">1249832rsad34</field>
+			<field name="vin">KAUK21XL847322</field>
 			<field name="first_name">Billy</field>
 			<field name="last_name">Bob</field>  
 		</record>
 		<record id="registry_03" model="motorcycle.registry">
 			<field name="registry_number">Reg 003</field>
-			<field name="vin">59838498</field>
+			<field name="vin">KAUK21XL847329</field>
 			<field name="first_name">Joe</field>
 			<field name="last_name">Doe</field>
         </record>

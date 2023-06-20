@@ -5,9 +5,9 @@ import re
 class Registry(models.Model):
 	_name = "motorcycle.registry"
 	_description = "Registry for a motorcycle"
-	# _sql_constraints = [
-    #     ('vin_unique', 'UNIQUE(vin)', 'Another registration for this VIN Number already exists.')
-    # ]
+	_sql_constraints = [
+        ('vin_unique', 'UNIQUE(vin)', ' Another registration for this VIN Number already exists.')
+    ]
 
 	registry_number = fields.Char(string="Registry Number", required=True,
 			       default="MRN0000", copy=False, readonly=True)
@@ -35,14 +35,7 @@ class Registry(models.Model):
 		for registry in self:
 			if not (re.match(pattern, registry.vin)):
 				raise ValidationError("Invalid VIN")
-			
-	@api.constrains('vin')
-	def _check_unique_vin(self):
-		for record in self:
-			existing_record = self.search([('vin', '=', record.vin)])
-			if len(existing_record) > 1:
-				raise ValidationError('Another registration for this VIN Number already exists.')
-
+		
 	 
 	@api.constrains('license_plate')
 	def _check_license_plate(self):
